@@ -13,7 +13,8 @@ export default [
       "standard",
       "plugin:react/recommended",
       "plugin:tailwindcss/recommended",
-      "prettier"
+      "prettier",
+      "plugin:@react-three/recommended"
 ],
  "rules": {
       "max-len": [2, 250],
