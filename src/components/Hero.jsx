@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [videoSrc, setvideoSrc] = useState(
-    window.innerWidth < 760 ? smallHeroVideo : heroVideo
+    window.innerWidth < 768 ? smallHeroVideo : heroVideo
   );
 
   const handleVideoSrcSet = () => {
-    if (window.innerWidth < 760) {
+    if (window.innerWidth < 768) {
       setvideoSrc(smallHeroVideo);
     } else {
       setvideoSrc(heroVideo);
@@ -30,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-black nav-height">
+    <section className="relative w-full bg-black md:nav-height">
       <div className="flex-col w-full flex-center h-5/6">
         <p id="hero" className="hero-title">
           iPhone 15 Pro
@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       <div id="cta" className="flex flex-col items-center translate-y-20 opacity-0" >
-        <a href="#highlights" className="btn" >Buy</a>
+        <a href="#highlights" className="cursor-not-allowed btn" >Buy</a>
         <p className="text-xl font-normal">From $199/month ot $999</p>
       </div>
     </section>
